@@ -10,6 +10,11 @@ pipeline {
             steps {
                 bat ' dir '
             }
+        stage('webhook') {
+            steps {
+                echo 'ajout webhook'
+            }
+        }
         }
 }
 }
