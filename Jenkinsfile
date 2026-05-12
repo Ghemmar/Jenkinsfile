@@ -1,16 +1,15 @@
 pipeline {
     agent any
     stages {
-        stage('Jenkins') {
+        stage('Clone') {
             steps {
-                echo 'Jen'
+                checkout scm
             }
         }
-         stage('Clone') {
+         stage('list files') {
             steps {
-                echo 'clone'
+                bat ' dir '
             }
         }
-
-        }
-    }
+}
+}
